@@ -13,25 +13,14 @@ class MyApp extends StatelessWidget {
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(Colors.white)
       ..loadRequest(
-        Uri.parse('https://www.kohat.edu.pk/'),
+        Uri.parse('PLACE YOUR URL HERE'),
       ); // Replace with your actual URL
 
     return MaterialApp(
-      title: 'Kohat University Website',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       home: Scaffold(
-        body: SafeArea(
-          child: Container(
-            child: ClipRRect(
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
-              ),
-              child: WebViewWidget(controller: controller),
-            ),
-          ),
-        ),
+        body: SafeArea(child: WebViewWidget(controller: controller)),
       ),
     );
   }
